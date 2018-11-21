@@ -53,11 +53,12 @@ xhr.onreadystatechange = function(e) {
 CSS = '''
 #microgram {
   margin-left: -25px;
+  overflow: hidden;
 }
 #microgram div.photo {
   float: left;
-  width: 200px;
-  height: 200px;
+  width: %(size)spx;
+  height: %(size)spx;
   margin: 0 0 25px 25px;
 }
 #microgram div.photo:hover {
@@ -109,8 +110,9 @@ class RootController(HookController):
         return JAVASCRIPT
 
     @expose(content_type='text/css')
-    def css(self):
-        return CSS
+    def css(self, size='200'):
+        assert int(size)
+        return CSS % dict(size=size)
 
     @expose('error.html')
     def error(self, status):
