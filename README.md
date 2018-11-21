@@ -3,7 +3,7 @@ Microgram
 
 Code used for creating a "Photo Index" page for a Micro.blog hosted website.
 
-Currently used on [my wife's site](http://cleverangel.org/photos).
+Currently used on [my wife's site](http://cleverangel.org/pictures).
 
 To use, simply create a page on your Micro.blog website with the following
 content:
