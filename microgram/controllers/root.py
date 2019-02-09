@@ -60,6 +60,7 @@ CSS = '''
   width: %(size)spx;
   height: %(size)spx;
   margin: 0 0 25px 25px;
+  transition: all 200ms ease-in-out;
 }
 #microgram div.photo:hover {
   cursor: pointer;
