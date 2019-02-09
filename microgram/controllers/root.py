@@ -11,14 +11,13 @@ JAVASCRIPT = '''var container = document.getElementById('microgram');
 function renderImage(image) {
     var linkEl = document.createElement('a');
     linkEl.href = image['url'];
+    linkEl.className = 'photo-link';
     container.appendChild(linkEl);
 
     var imageEl = document.createElement('div');
     imageEl.className = 'photo';
     var url = image['_microblog']['thumbnail_url'];
     imageEl.style.backgroundImage = 'url(' + url + ')';
-    imageEl.style.backgroundSize = 'cover';
-    imageEl.style.backgroundPosition = '50%';
     linkEl.appendChild(imageEl);
 }
 
@@ -52,14 +51,20 @@ xhr.onreadystatechange = function(e) {
 
 CSS = '''
 #microgram {
-  margin-left: -25px;
   overflow: hidden;
 }
-#microgram div.photo {
-  float: left;
+#microgram .photo-link {
   width: %(size)spx;
   height: %(size)spx;
-  margin: 0 0 25px 25px;
+  display: inline-block;
+  margin: 10px;
+}
+#microgram div.photo {
+  width: %(size)spx;
+  height: %(size)spx;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center;
   transition: all 200ms ease-in-out;
 }
 #microgram div.photo:hover {
