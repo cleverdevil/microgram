@@ -30,3 +30,12 @@ you can change this by passing a `size` parameter to the CSS include like so:
 
 Note: this is still relatively experimental, and has some assumptions baked in
 that need to be made configurable on a per-website basis.
+
+
+Having a Problem?
+-----------------
+
+If you're experiencing a problem, feel free to open a bug. The most common issue
+tends to be when Micro.blog's own image proxy service is down. If that happens,
+your photo grid will appear to load, but no images will actually show up.
+Generally speaking, this resolves itself quickly!
